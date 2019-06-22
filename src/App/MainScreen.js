@@ -7,12 +7,23 @@ import WthLoginScreen from './withLogin/WthLoginScreen'
 @inject('UserStore')
 @observer
 class MainScreen extends Component {
+
+    constructor(props){
+        super(props)
+        const { UserStore } = this.props
+        const token = sessionStorage.getItem("token")
+        if(token)
+            UserStore.addUserData({email: "", userToken:token})
+    }
+
     render(){
         const { UserStore } = this.props
 
         if(UserStore.userData.token){
             return (
-                <WthLoginScreen userType={UserStore.userData.userType} />
+                <div>
+                    <WthLoginScreen />
+                </div>
             )
         }else{
             return (

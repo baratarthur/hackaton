@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color:  #e3f2fd;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h4{
+  font-family: 'Lobster Two', cursive;
+}
+
+.btn-logoff {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+.btn-refresh{
+  position: fixed;
+  left: 10px;
+  top: 10px;
+}
+
+.feed {
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
